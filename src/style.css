@@ -2,15 +2,56 @@ h1 {
   text-align: center;
   font-size: 48px;
   font-weight: 600;
+  padding-bottom: 25px;
 }
 
 select {
-  width: 50%;
+  width: 100%;
   display: block;
   margin: 0 auto;
   padding: 5px 8px;
-
   border-radius: 4px;
   font-size: 18px;
   opacity: 0.6;
+}
+
+footer {
+  text-align: center;
+  margin-top: -50px;
+}
+
+#container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: white;
+  padding: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url(https://previews.123rf.com/images/andreykuzmin/andreykuzmin1401/andreykuzmin140100034/24963105-old-world-map-background.jpg);
+}
+
+.time,
+.city {
+  font-size: 25px;
+  margin-top: 40px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.lastUpdate {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.col-8,
+.col-4 {
+  border-bottom: 2px dotted;
+}
+
+.col-4:last-child {
+  border-bottom: none;
 }
