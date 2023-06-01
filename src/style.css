@@ -51,6 +51,15 @@ footer {
   border-bottom: 2px dotted;
 }
 
-.col-4:last-child {
+/* .col-4:last-child {
+  border-bottom: none;
+}
+
+.col-8:last-child {
+  border-bottom: none;
+}
+ */
+
+.col-8:last-child {
   border-bottom: none;
 }
