@@ -62,6 +62,10 @@ function showSelctedCountry(event) {
             )} <small> ${cityTime.format("A")}<small></div>
           </div>
           </div>`;
+
+  setTimeout(() => {
+    showSelctedCountry(event);
+  }, 1000);
 }
 
 let countrieSelect = document.querySelector("#countries");
