@@ -44,7 +44,8 @@ function updateTime() {
 
 function showSelctedCountry(event) {
   if (event.target.value.length > 0) {
-    let cityName = event.target.value;
+    let cityTimeZone = event.target.value;
+    let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityElement = document.querySelector(".citiesContainer");
     let cityTime = moment().tz(cityName);
     cityElement.innerHTML = `
