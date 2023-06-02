@@ -45,9 +45,14 @@ function updateTime() {
 function showSelctedCountry(event) {
   if (event.target.value.length > 0) {
     let cityTimeZone = event.target.value;
+    if (cityTimeZone === "current") {
+      cityTimeZone = moment.tz.guess();
+      console.log(cityTimeZone);
+    }
+
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityElement = document.querySelector(".citiesContainer");
-    let cityTime = moment().tz(cityName);
+    let cityTime = moment().tz(cityTimeZone);
     cityElement.innerHTML = `
     <div class="citiesContainer">
         <div class="container text-center"></div>
