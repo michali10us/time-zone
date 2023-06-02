@@ -63,3 +63,14 @@ footer {
 .col-8:last-child {
   border-bottom: none;
 }
+
+a {
+  font-size: 18px;
+}
+
+.homepage {
+  color: black;
+  opacity: 0.8;
+  display: block;
+  margin-top: 15px;
+}

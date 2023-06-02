@@ -68,7 +68,9 @@ function showSelctedCountry(event) {
               "hh:mm:ss"
             )} <small> ${cityTime.format("A")}<small></div>
           </div>
-          </div>`;
+          </div>
+          <a href="index.html" class="homepage">Back to Home Page</a>
+          `;
 
     setTimeout(() => {
       showSelctedCountry(event);
