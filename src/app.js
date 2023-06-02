@@ -1,6 +1,7 @@
 function updateTime() {
-  let newyorkUpdate = document.querySelector("#new-york .lastUpdate");
-  if (newyorkUpdate) {
+  let newyork = document.querySelector("#new-york");
+  if (newyork) {
+    let newyorkUpdate = document.querySelector("#new-york .lastUpdate");
     let newyorkElement = moment().tz("America/New_York");
     newyorkUpdate.innerHTML = newyorkElement.format("MMM DD, YYYY");
     let newyorkTime = document.querySelector("#newyork-time");
@@ -9,16 +10,18 @@ function updateTime() {
     );
   }
 
-  let romeUpdate = document.querySelector("#rome .lastUpdate");
-  if (romeUpdate) {
+  let rome = document.querySelector("#rome");
+  if (rome) {
+    let romeUpdate = document.querySelector("#rome .lastUpdate");
     let romeElement = moment().tz("Europe/Rome");
     romeUpdate.innerHTML = romeElement.format("MMM DD, YYYY");
     let romeTime = document.querySelector("#rome-time");
     romeTime.innerHTML = romeElement.format("hh:mm:ss [<small>]A[</small>]");
   }
 
-  let canadaUpdate = document.querySelector("#canada .lastUpdate");
-  if (canadaUpdate) {
+  let canada = document.querySelector("#canada");
+  if (canada) {
+    let canadaUpdate = document.querySelector("#canada .lastUpdate");
     let canadaElement = moment().tz("America/Vancouver");
     canadaUpdate.innerHTML = canadaElement.format("MMM DD, YYYY");
     let canadaTime = document.querySelector("#canada-time");
@@ -27,8 +30,9 @@ function updateTime() {
     );
   }
 
-  let SydneyUpdate = document.querySelector("#Sydney .lastUpdate");
-  if (SydneyUpdate) {
+  let Sydney = document.querySelector("#Sydney");
+  if (Sydney) {
+    let SydneyUpdate = document.querySelector("#Sydney .lastUpdate");
     let SydneyElement = moment().tz("Australia/Sydney");
     SydneyUpdate.innerHTML = SydneyElement.format("MMM DD, YYYY");
     let SydneyTime = document.querySelector("#Sydney-time");
@@ -53,10 +57,11 @@ function showSelctedCountry(event) {
             </div>
           </div>
           <div class="col-4">
-            <div class="time" >${cityTime.format("hh:mm:ss A")}</div>
+            <div class="time" id="">${cityTime.format(
+              "hh:mm:ss"
+            )} <small> ${cityTime.format("A")}<small></div>
           </div>
           </div>`;
-  updateTime();
 }
 
 let countrieSelect = document.querySelector("#countries");
