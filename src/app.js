@@ -43,10 +43,11 @@ function updateTime() {
 }
 
 function showSelctedCountry(event) {
-  let cityName = event.target.value;
-  let cityElement = document.querySelector(".citiesContainer");
-  let cityTime = moment().tz(cityName);
-  cityElement.innerHTML = `
+  if (event.target.value.length > 0) {
+    let cityName = event.target.value;
+    let cityElement = document.querySelector(".citiesContainer");
+    let cityTime = moment().tz(cityName);
+    cityElement.innerHTML = `
     <div class="citiesContainer">
         <div class="container text-center"></div>
         <div class="row">
@@ -63,11 +64,11 @@ function showSelctedCountry(event) {
           </div>
           </div>`;
 
-  setTimeout(() => {
-    showSelctedCountry(event);
-  }, 1000);
+    setTimeout(() => {
+      showSelctedCountry(event);
+    }, 1000);
+  }
 }
-
 let countrieSelect = document.querySelector("#countries");
 countrieSelect.addEventListener("change", showSelctedCountry);
 updateTime();
